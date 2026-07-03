@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptGallery - Discover AI Prompts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-container">
+            <h1 class="logo">PromptGallery</h1>
+            <p class="tagline">Discover the best AI prompts for every creative need.</p>
+            <a href="#waitlist" class="btn btn-primary" id="hero-cta">Join Waitlist</a>
+        </div>
+    </header>
+
+    <section class="filters-container" aria-label="Category Filters">
+        <div class="filters">
+            <button class="filter active" data-category="all">All</button>
+            <button class="filter" data-category="portraits">Portraits</button>
+            <button class="filter" data-category="fashion">Collages</button>
+            <button class="filter" data-category="interior">Interior</button>
+            <button class="filter" data-category="product">Product</button>
+        </div>
+    </section>
+
+
+    <main class="gallery-wrapper">
+        <div class="gallery-grid" id="gallery">
+            
+            <article class="card" data-category="portraits">
+                <div class="card-image-wrapper" style="--aspect-ratio: 4/5;">
+                    <img loading="lazy" src="potrait_pic/1.jpeg" alt="Portrait Picture"> alt="Golden Hour Focus Portrait">
+                </div>
+
+                <div class="card-content">
+                    <span class="badge">Portraits</span>
+                    <h3 class="card-title">Golden Hour Focus</h3>
+                    <button class="btn-copy" data-prompt="EDIT THE UPLOADED PHOTO ONLY. Preserve the original person's identity, facial structure, skin tone, hairstyle, body proportions, clothing silhouette, and overall composition. Do not replace the person. Transform the image into a soft cinematic fine-art portrait with an ethereal dreamlike atmosphere.
+Apply a strong yet elegant golden-beige, honey, cream, caramel, and warm sepia color grade across the entire image. Create a nostalgic analog-film mood with warm highlights and soft amber shadows. Remove any harsh colors, cool tones, strong contrast, or oversaturated areas. The overall palette should feel creamy, muted, luxurious, and emotionally cinematic.
+Introduce intentional artistic motion blur and subtle ghosting effects around the face, hair, and edges of the subject, as if captured during a slow shutter exposure. The blur should appear natural and graceful, not distorted. Add delicate movement streaks flowing horizontally and diagonally, creating a sense of motion and emotion. Keep the subject recognizable.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+ <article class="card" data-category="portraits">
+                <div class="card-image-wrapper" style="--aspect-ratio: 2/3;">
+                    <img loading="lazy" src="potrait_pic/4.jpeg"
+                    " alt="B&W Editorial Portrait">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Portraits</span>
+                    <h3 class="card-title">Vintage Film</h3>
+                    <button class="btn-copy" data-prompt="Ultra-realistic fine-art editorial portrait, timeless analog film aesthetic, photographed with an 85mm portrait lens, eye-level camera angle, close-up head-and-shoulders composition, subject in a subtle three-quarter pose looking back toward the camera, calm introspective expression, loose natural hair with a few strands gently crossing the face, soft window-style side lighting creating delicate facial shadows, low-key cinematic lighting, smooth highlight roll-off, rich matte blacks, shallow depth of field with razor-sharp eyes and creamy background blur, monochrome black-and-white with a warm sepia tint, Kodak Portra and Ilford film-inspired color science, authentic analog grain, subtle dust particles, tiny film scratches, faded matte finish, soft vignette, vintage instant-film border, nostalgic mood, elegant editorial beauty photography, realistic skin texture with minimal retouching, premium fashion magazine quality, cinematic storytelling, photorealistic, ultra-detailed, HDR, masterpiece quality, 8K.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+     <article class="card" data-category="portraits">
+                <div class="card-image-wrapper" style="--aspect-ratio: 3/4;">
+                    <img loading="lazy" src="potrait_pic/3.jpeg" alt="Organic Earthy Tones Focus Potrait">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Portraits</span>
+                    <h3 class="card-title">Organic Earthy Tones Focus</h3>
+                    <button class="btn-copy" data-prompt="Ultra-realistic cinematic lifestyle portrait photography, premium editorial storytelling aesthetic, photographed with an 85mm portrait lens, eye-level camera angle, medium shot composition, subject naturally interacting with the environment, authentic candid laughter, relaxed body language, genuine emotional expression, warm natural daylight softly illuminating the face, diffused ambient lighting, subtle shadow depth, slightly underexposed cinematic exposure, rich earthy color grading, warm terracotta and amber tones, muted background colors, vintage film-inspired palette, realistic skin texture, soft highlight rolloff, matte shadows, rustic architectural setting with aged textures and weathered surfaces, environmental storytelling composition, shallow depth of field, softly blurred background while preserving environmental context, cinematic realism, nostalgic atmosphere, organic human moment, documentary-style portraiture, timeless visual mood, premium Lightroom color grading, natural imperfections retained, high dynamic range, professional editorial photography, photorealistic, ultra-detailed, masterpiece quality, 8k resolution.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+            <article class="card" data-category="portraits">
+                <div class="card-image-wrapper" style="--aspect-ratio: 3/4;">
+                    <img loading="lazy" src="potrait_pic/2.jpeg" alt="Cyberpunk Street Portrait">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Portraits</span>
+                    <h3 class="card-title">Sunlit Backdrop Focus</h3>
+                    <button class="btn-copy" data-prompt="Neon-lit portrait of a man in a futuristic cyberpunk city, rainy night, cinematic reflections.">Copy Prompt</button>
+                </div>
+            </article>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+     <article class="card" data-category="fashion">
+                <div class="card-image-wrapper" style="--aspect-ratio: 2/3;">
+                    <img loading="lazy" src="collages/4.jpeg" alt="Cute Social Frame">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Collages</span>
+                    <h3 class="card-title">Cute Social Frame</h3>
+                    <button class="btn-copy" data-prompt="Transform the uploaded image into a cute Y2K Instagram-style editorial portrait while preserving the person's exact identity, facial features, hairstyle, skin tone, clothing, body proportions, pose, expression, and camera angle. Keep the original background exactly the same unless instructed otherwise. Place the subject inside a large tilted Polaroid/Instagram-style photo frame with clean white borders and a soft drop shadow. Add a hand-drawn white dashed outline following the subject's silhouette, making them appear to pop out of the frame. Decorate the composition with playful doodles and kawaii stickers such as hearts, sparkles, stars, cherries, bows, bunny ears, cupcakes, flowers, butterflies, smiley faces, speech bubbles, arrows, exclamation marks, and hand-drawn shapes. Include subtle Instagram-inspired UI icons at the bottom of the frame (like, comment, share, save) without logos or branding. Use soft pastel colors, creamy whites, blush pinks, warm neutrals, and gentle highlights. Apply soft beauty retouching, smooth skin, bright eyes, subtle glow, and natural lighting while maintaining realistic textures. Create a premium Pinterest, Instagram, and Y2K scrapbook aesthetic with a clean, balanced composition, photorealistic quality, ultra-detailed, high resolution, magazine-worthy finish.
+Optional Add-on (3D Pop-Out Effect)
+Make the subject extend outside the Polaroid frame naturally, with the head, shoulders, and arms breaking through the border to create a realistic layered 3D pop-out effect. Add realistic shadows where the subject overlaps the frame to enhance depth.">Copy Prompt</button>
+                </div>
+            </article>
+            
+           
+
+
+
+            <article class="card" data-category="fashion">
+                <div class="card-image-wrapper" style="--aspect-ratio: 4/5;">
+                    <img loading="lazy" src="collages/2.jpeg" alt="Moodboard Aesthetic">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Collages</span>
+                    <h3 class="card-title">Moodboard Aesthetic</h3>
+                    <button class="btn-copy" data-prompt="the user uploads only one image, do not generate the final result yet. Instead, politely ask them to upload one more different photo of the same person. Wait until two photos are provided before continuing. The second photo should have a different pose, angle, or expression for variety.
+Once two photos are uploaded, create a premium aesthetic social-media collage using only those two uploaded photos. Never replace the person's identity. Preserve their exact facial features, hairstyle, skin tone, body proportions, clothing, accessories, makeup, and overall appearance. Do not beautify, reshape, or generate a different face. Maintain full identity consistency across every panel.
+Design a Pinterest-inspired editorial collage with multiple photo panels. Use one image as the main portrait and automatically create several artistic crops from the uploaded images, including a close-up of the lips, one eye close-up, part of the face, shoulder detail, and another portrait. These cropped panels must come only from the uploaded photos and not be AI-generated. Arrange them in a clean overlapping collage with white Polaroid-style borders, slightly rotated frames, soft shadows, and balanced spacing.
+Keep the original lighting, colors, clothing, and facial details realistic while applying premium cinematic color grading with warm cream, beige, ivory, soft peach, muted brown, and subtle golden tones. The overall mood should feel cozy, romantic, elegant, and luxurious.
+Decorate the collage with aesthetic elements such as realistic flowers matching the color palette, delicate petals, soft botanical accents, elegant paper textures, subtle grain, tiny sparkles, handwritten doodles, minimal tape pieces, scrapbook paper layers, and tasteful decorative graphics. All decorative elements should enhance the composition without covering important facial features.
+Include a modern music player card inspired by streaming apps, featuring elegant album artwork, playback controls, and a clean interface. Do not use copyrighted album covers or copyrighted song artwork. Instead, generate an original minimalist music card that complements the collage aesthetic.
+Use a clean off-white, cream, beige, or soft neutral background with subtle paper texture. Arrange every panel with professional editorial balance, leaving comfortable negative space for a premium scrapbook look.
+The final artwork should resemble a luxury Pinterest aesthetic mood board, fashion editorial collage, Instagram carousel cover, and premium scrapbook design. It should feel handcrafted yet modern, with ultra-realistic details, soft natural lighting, crisp edges, subtle film grain, HDR quality, and 8K resolution. The final composition should be elegant, cohesive, highly detailed, and professionally designed">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+            <article class="card" data-category="fashion">
+                <div class="card-image-wrapper" style="--aspect-ratio: 3/4;">
+                    <img loading="lazy" src="collages/3.jpeg" alt="Fisheye & Overhead">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Collages</span>
+                    <h3 class="card-title">Fisheye & Overhead</h3>
+                    <button class="btn-copy" data-prompt="70s retro fashion aesthetic, colorful patterns, warm color grading, dynamic Polaroid aesthetic.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+
+            
+
+
+
+     <article class="card" data-category="fashion">
+                <div class="card-image-wrapper" style="--aspect-ratio: 2/3;">
+                    <img loading="lazy" src="collages/1.jpeg" alt="Scrapbook Aesthetic">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Collages</span>
+                    <h3 class="card-title">Scrapbook Aesthetic</h3>
+                    <button class="btn-copy" data-prompt="Transform the uploaded photo into a premium fashion editorial collage while preserving my exact identity, facial features, hairstyle, expression, body shape, pose, clothing, accessories, proportions, camera angle, framing, perspective, and the entire original background exactly as uploaded. Do not replace, remove, redesign, crop, or regenerate any part of the background. Every object, wall, furniture, architecture, scenery, lighting direction, shadows, reflections, textures, and composition must remain exactly the same.
+Convert the entire image into a warm monochromatic editorial aesthetic. My full body, face, clothing, and visible skin should become rich black-and-white with warm sepia undertones, matte blacks, deep charcoal shadows, soft cream highlights, subtle silver-gray transitions, cinematic contrast, and premium magazine-quality tonal grading. Preserve realistic skin texture, facial details, hair strands, clothing folds, and natural shadows while applying a luxurious monochrome treatment.
+Place a bold hand-cut white paper outline around my entire body, creating the appearance of a professionally cut magazine collage. The outline should be slightly irregular and organic, giving a handcrafted editorial look.
+Overlay sophisticated editorial collage elements throughout the composition while keeping the background visible: layered paper textures, torn paper fragments, vintage print textures, abstract geometric blocks, halftone textures, newspaper-style graphics, minimal grid patterns, technical diagrams, barcode graphics, architectural line drawings, handwritten scribbles, paint strokes, brush loops, circular ink rings, distressed textures, subtle grain, ink splatters, paper creases, and magazine layout elements. These graphics should blend naturally with the existing background rather than replacing it.
+Add large modern typography integrated into the composition, including oversized vertical letters, bold sans-serif text, cropped words, rotated text blocks, abstract typographic elements, and magazine-inspired graphic layouts. The typography should feel artistic and premium rather than readable, functioning as part of the design.
+Use a luxury editorial color palette consisting of matte black, charcoal gray, warm sepia, ivory, cream, beige, sand, burnt orange, terracotta, muted brown, and soft vintage paper tones. Maintain a balanced composition with modern graphic design principles, strong visual hierarchy, negative space, and layered depth.
+Apply subtle film grain, paper texture, offset print imperfections, soft vignette, high dynamic range, premium color grading, crisp edges, ultra-sharp details, realistic lighting, and museum-quality finishing. The final result should resemble a high-end Vogue-style fashion editorial poster, luxury magazine cover, contemporary graphic design collage, cinematic mixed-media artwork, and professional advertising campaign.
+Ultra-realistic, photorealistic, editorial photography, mixed-media collage, premium graphic design, fashion campaign aesthetic, luxury magazine cover, highly detailed, HDR, 8K resolution, masterpiece quality, sharp focus, clean composition, professional print-ready artwork.">Copy Prompt</button>
+                </div>
+            </article>
+            
+
+
+
+
+
+
+    
+            
+
+
+
+
+
+
+
+<!-- interioir -->
+
+
+            <article class="card" data-category="interior">
+                <div class="card-image-wrapper" style="--aspect-ratio: 1/1;">
+                    <img loading="lazy" src="interior/1.jpeg" alt="Warm & Moody Workspace">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Interior</span>
+                    <h3 class="card-title">Warm & Moody Workspace</h3>
+                    <button class="btn-copy" data-prompt="Use the uploaded room photo as the base reference. Preserve the exact room dimensions, wall positions, floor layout, windows, doors, ceiling height, and architectural structure. Do not change the original room shape. Transform the space into a luxurious modern executive office while adapting all furniture sizes, spacing, and proportions naturally to fit the actual room size.
+
+Create a sophisticated dark-modern interior featuring charcoal gray walls, rich walnut wood finishes, black accents, brushed brass details, and premium stone textures. Install custom floor-to-ceiling built-in shelving units with integrated warm LED accent lighting. Decorate the shelves with carefully selected books, sculptures, plants, ceramic vases, and luxury decorative objects.
+
+Place a large executive desk as the visual centerpiece of the room. Use a premium wood desktop with sleek modern legs and a matching executive chair. Add elegant guest seating with leather lounge chairs positioned naturally according to the room size. If the room is large, expand the layout with additional seating areas, shelving, storage units, and decorative elements while maintaining spacious balance. If the room is small, scale all furniture proportionally without overcrowding the space.
+
+Install a statement pendant light hanging above the main desk. Add recessed ceiling spotlights to create layered ambient illumination. Use warm accent lighting throughout the shelving and decorative areas to create depth and luxury.
+
+Include large abstract artwork, marble wall panels, premium wood textures, modern accessories, and subtle luxury details. Maintain a minimalist aesthetic with clean lines, balanced symmetry, and professional elegance.
+
+The atmosphere should feel powerful, sophisticated, successful, modern, and timeless, similar to a luxury executive office, high-end architecture magazine feature, premium law office, or CEO workspace.
+
+Lighting: warm ambient lighting, architectural lighting, integrated shelf lighting, soft shadows, luxury hotel atmosphere, premium interior illumination.
+
+Materials: walnut wood, dark oak, black metal, marble, leather, brushed brass, stone, textured wall panels.
+
+Camera & Style: ultra-wide interior photography, professional architectural visualization, realistic room proportions, luxury interior design render, photorealistic materials, HDR lighting, realistic shadows, ultra detailed textures, cinematic composition, premium architecture photography, 8K realism, masterpiece quality.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+
+
+
+            <article class="card" data-category="interior">
+                <div class="card-image-wrapper" style="--aspect-ratio: 4/5;">
+                    <img loading="lazy" src="interior/2.jpeg" alt="Modern Kitchen Space">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Interior</span>
+                    <h3 class="card-title">Peaceful Ambience Interior</h3>
+                    <button class="btn-copy" data-prompt="Use the uploaded room photo as the base reference. Preserve the exact room layout, wall positions, floor, windows, ceiling height, door placement, and room proportions. Transform the empty room into an ultra-cute Korean-Japanese kawaii bedroom aesthetic while keeping the original architecture unchanged.
+
+Design the room with a soft pastel pink, cream, and warm beige color palette. Add a cozy single bed with pink gingham bedding, fluffy blankets, flower-shaped pillows, and cute plush toys placed naturally on the bed. Surround the headboard area with warm fairy lights that create a soft golden glow.
+
+Place white minimalist furniture throughout the room, including a cute desk setup, floating shelves, bedside table, and storage units. Decorate the walls with adorable pastel posters, flower illustrations, cute character artwork, and aesthetic Korean room décor. Install a soft pink neon cloud wall light above the bed.
+
+Add decorative table lamps with warm ambient lighting, creating a dreamy cozy atmosphere throughout the room. Place flower-shaped rugs, pastel runners, and fluffy carpets on the floor. Include tulips in glass vases, cute figurines, books, candles, and carefully arranged accessories that make the room feel lived-in and charming.
+
+The room should feel warm, clean, feminine, cozy, playful, and highly aesthetic. Every corner should contain cute decorative details while remaining organized and functional. The design should resemble a popular Korean room makeover seen on Pinterest, Instagram, and aesthetic room inspiration boards.
+
+Lighting: warm ambient lighting, fairy lights, soft lamp glow, cozy evening atmosphere, gentle shadows, dreamy illumination, golden warm tones.
+
+Style: kawaii bedroom aesthetic, Korean room decor, Japanese cute interior design, pastel aesthetic, Pinterest-inspired room makeover, cozy lifestyle photography, ultra detailed interior design, realistic furniture placement, realistic room transformation, photorealistic, highly detailed textures, luxury cozy aesthetic, 8K realism.
+
+Camera: wide-angle interior photography, full room view, realistic architectural perspective, professional interior design rendering, photorealistic room visualization.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+            <article class="card" data-category="interior">
+                <div class="card-image-wrapper" style="--aspect-ratio: 2/3;">
+                    <img loading="lazy" src="interior/3.jpeg" alt="Industrial Loft Apartment">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Interior</span>
+                    <h3 class="card-title">Earthy Aesthetic Furniture</h3>
+                    <button class="btn-copy" data-prompt="Use the uploaded room photo as the base reference. Preserve the exact room dimensions, wall positions, floor layout, windows, doors, ceiling height, and architectural structure. Do not alter the original room shape. Transform the room into a soft feminine cozy bedroom inspired by luxury Pinterest interiors while adapting all furniture sizes, decor placement, and spacing naturally to fit the actual room dimensions.
+
+Create an elegant and welcoming bedroom featuring a large upholstered bed with a vertically channeled padded headboard in soft beige fabric. Dress the bed with layered floral bedding, textured knit blankets, decorative throw pillows, and soft pastel accent cushions in blush pink, cream, sage green, and warm beige tones.
+
+Design a cozy vanity area beside the bed featuring a modern makeup desk with wood and white finishes, a plush velvet vanity chair, and a large round mirror illuminated with subtle warm backlighting. Arrange beauty products neatly for a clean and organized appearance.
+
+Install floating wooden shelves decorated with framed botanical artwork, candles, books, ceramic vases, and decorative accessories. Add cascading hanging plants and natural greenery throughout the room to create a fresh organic atmosphere.
+
+Create a vertical wood slat accent feature behind the bed and vanity area. Integrate warm LED accent lighting behind shelves and architectural features to create a soft ambient glow during the evening.
+
+Use soft area rugs with fluffy textures, elegant bedside tables, warm pendant lights, and carefully styled decorative objects. The room should feel calm, cozy, feminine, sophisticated, and naturally inviting.
+
+If the room is large, expand the design with additional storage, a reading corner, larger shelving arrangements, and more decorative elements while maintaining balance and openness. If the room is small, intelligently scale all furniture and decor while preserving the same aesthetic and functionality.
+
+Color Palette: warm beige, ivory, cream, blush pink, dusty rose, sage green, natural oak wood, soft taupe.
+
+Materials: upholstered fabric, natural wood, soft textiles, boucle fabrics, ceramic decor, glass accents, woven textures, botanical elements.
+
+Lighting: warm ambient lighting, soft bedside lamps, subtle shelf lighting, candle-like glow, cozy evening atmosphere, gentle shadows, luxurious hotel-inspired illumination.
+
+Style: feminine Pinterest bedroom, Scandinavian-inspired interior, modern cozy bedroom, luxury apartment aesthetic, soft romantic decor, boutique hotel styling, photorealistic interior design, realistic furniture placement, ultra-detailed textures, architectural visualization, HDR lighting, 8K realism.
+
+Camera & Style: professional interior photography, wide-angle room view, realistic proportions, natural perspective, photorealistic rendering, luxury interior magazine quality.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+<article class="card" data-category="interior">
+                <div class="card-image-wrapper" style="--aspect-ratio: 2/3;">
+                    <img loading="lazy" src="interior/4.jpeg" alt="Cozy Reading Corner">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Interior</span>
+                    <h3 class="card-title">Cozy Reading Corner</h3>
+                    <button class="btn-copy" data-prompt="Ultra-realistic cozy reading nook interior design, Scandinavian-inspired aesthetic, warm minimalist home decor, soft neutral color palette of ivory, cream, beige, blush pink, sage green, and natural wood tones, elegant lifestyle photography, fluffy oversized lounge chair with plush textured fabric and knitted throw blanket, decorative accent pillow, tall white bookshelf filled with neatly arranged books, small plants, candles, ceramic decor, fairy lights, trailing ivy vines cascading around the shelf, curated gallery wall with pastel artwork and minimalist wooden frames, warm ambient floor lamp casting soft golden light across the wall, subtle wall light patterns, floral vintage-inspired area rug in muted pastel colors, soft natural daylight blending with warm indoor lighting, clean organized space, hygge atmosphere, cozy book lover aesthetic, feminine modern decor, soft shadows, realistic textures, premium interior styling, balanced composition, eye-level perspective, wide-angle interior photography (24–35mm lens), shallow yet natural depth of field, warm cinematic color grading, Lightroom interior edit, inviting peaceful mood, luxury apartment aesthetic, Pinterest-worthy home decor, high-end editorial interior photography, photorealistic, ultra-detailed, HDR, 8K.
+">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- product  -->
+
+
+            <article class="card" data-category="product">
+                <div class="card-image-wrapper" style="--aspect-ratio: 3/4;">
+                    <img loading="lazy" src="product/2.jpeg" alt="Product swatch shot">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Product</span>
+                    <h3 class="card-title">Product Swatch Shot</h3>
+                    <button class="btn-copy" data-prompt="Transform the uploaded product into this exact premium beauty advertisement style while preserving the uploaded product's exact identity. Replace the product in the reference with the user's uploaded product, keeping its original packaging, bottle shape, cap, branding, logo, typography, proportions, material, label placement, texture, and every design detail completely unchanged. Do not redesign, simplify, or invent any packaging elements.
+If the uploaded product contains a visible cosmetic shade (lip gloss, lipstick, tint, liquid blush, foundation, etc.), use the exact shade from the uploaded product for every visible application. The swatch on the skin, applicator, bottle opening, and product residue must perfectly match the uploaded product's original color, undertone, saturation, brightness, opacity, and finish. Never change the shade or substitute another color. The applied cosmetic must look identical to the uploaded product's real formula with realistic pigmentation, gloss, shine, reflections, and texture.
+Keep the exact same composition as the reference: one hand naturally holding the cosmetic bottle while another hand applies the product using the original applicator onto the back of the hand. Preserve the same camera angle, framing, perspective, crop, hand positions, lighting direction, shadows, depth of field, and background. Maintain the same warm golden-hour sunlight, dramatic window-light shadows, premium editorial lighting, soft contrast, and luxurious beauty campaign aesthetic.
+Create realistic skin texture with clean manicured nails, natural pores, soft highlights, premium reflections on the packaging, crisp branding, realistic glass and plastic materials, and ultra-sharp focus. The product should appear as if it was originally photographed in this exact setup. Produce a luxury cosmetic advertisement suitable for Sephora, Dior Beauty, Fenty Beauty, Rare Beauty, Charlotte Tilbury, and high-end skincare campaigns. Photorealistic, commercial product photography, magazine-quality, HDR, ultra-detailed, 8K resolution.
+If the uploaded product is not a colored cosmetic (such as a serum, moisturizer, perfume, or skincare product), preserve its natural product color and texture while maintaining the same premium composition and lighting style.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+
+
+
+   <article class="card" data-category="product">
+                <div class="card-image-wrapper" style="--aspect-ratio: 3/4;">
+                    <img loading="lazy" src="product/1.jpeg" alt="Earthy Minimalist Product Photography">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Product</span>
+                    <h3 class="card-title">Earthy Minimalist Product Photography</h3>
+                    <button class="btn-copy" data-prompt="Use a simple serum bootle it on yiu choose your theme
+Ultra-realistic luxury skincare product photography, premium commercial flat lay, elegant beige cosmetic tube placed on a rustic wooden tray, surrounded by botanicals and decorative elements carefully matched to the product color palette, replacing bright flowers with cream, ivory, champagne, sand-beige, dried pampas grass, preserved eucalyptus, soft oat stems, bleached leaves, neutral-toned florals and organic textures, monochromatic warm aesthetic, cohesive brand color harmony, soft flowing beige fabric background, warm natural sunlight, gentle shadows, subtle atmospheric smoke, minimalist luxury composition, high-end beauty campaign style, earthy elegance, soft matte textures, premium packaging presentation, creamy highlights, warm golden color grading, shallow depth of field, photorealistic, ultra-detailed, luxury skincare advertisement, magazine-quality product photography, 8K.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+<article class="card" data-category="product">
+                <div class="card-image-wrapper" style="--aspect-ratio: 4/5;">
+                    <img loading="lazy" src="product/4.jpeg" alt="Sneaker Commercial Shot">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Product</span>
+                    <h3 class="card-title">Sneaker Commercial Shot</h3>
+                    <button class="btn-copy" data-prompt="Transform the uploaded product into this exact premium minimalist commercial advertisement while preserving the uploaded product's exact identity. Replace the product shown in the reference with the uploaded product without changing any part of its design. Preserve the uploaded product exactly as it is, including its packaging, shape, proportions, branding, logo, typography, label placement, colors, materials, textures, finish, transparency, reflections, cap, pump, applicator, nozzle, lid, or any other product-specific details. Never redesign, simplify, recreate, or alter the uploaded product.
+Automatically extract the dominant colors from the uploaded product and use them as the entire advertisement's color palette. The background, geometric shapes, buttons, headlines, accents, borders, graphic elements, shadows, gradients, and decorative blocks must perfectly match the uploaded product's primary and secondary colors. Do not use the green theme from the reference unless the uploaded product is green. If the uploaded product is pink, use a pink theme; if blue, use a blue theme; if black and gold, use a black-and-gold luxury theme; if beige, use a beige neutral theme. Every design element should harmonize with the uploaded product's actual colors.
+Recreate the same clean premium poster layout with a floating hero product positioned on the right side, realistic soft shadow beneath the product, modern geometric background panels, elegant negative space, bold oversized typography, promotional percentage, call-to-action button, small information blocks, minimal editorial layout, and balanced visual hierarchy. Replace all placeholder text with clean premium typography or realistic editable placeholder text while keeping the same overall composition and spacing.
+Maintain the exact camera angle, floating perspective, lighting direction, soft studio lighting, realistic reflections, premium shadows, depth, and luxury commercial aesthetic. Create a modern Instagram advertisement, luxury e-commerce banner, premium brand campaign, Apple-inspired minimal design, Swiss editorial layout, high-end commercial product photography, photorealistic rendering, ultra-clean composition, crisp edges, premium typography, HDR lighting, ultra-detailed, magazine quality, 8K resolution.
+The final image should look like it was professionally designed specifically for the uploaded product, with every color, accent, and graphic element automatically coordinated to the uploaded product's exact color palette while preserving the uploaded product exactly as uploaded.">Copy Prompt</button>
+                </div>
+            </article>
+
+
+
+
+<article class="card" data-category="product">
+                <div class="card-image-wrapper" style="--aspect-ratio: 4/5;">
+                    <img loading="lazy" src="product/3.jpeg" alt="Luxury Jewelry Editorial Advertisement">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Product</span>
+                    <h3 class="card-title">Luxury Jewelry Editorial Advertisement</h3>
+                    <button class="btn-copy" data-prompt="Analyze the uploaded jewelry image first and automatically identify the brand name from the logo, packaging, engraving, or visible branding. If a brand name is detected, replace every occurrence of the reference brand name (such as "Tanishq") with the uploaded product's actual brand name throughout the advertisement, including the main headline, logo placement, tagline, and website or brand text. If no branding is visible, generate a clean luxury advertisement without inventing a brand name.
+Transform the uploaded earring into this exact premium luxury jewelry advertisement while preserving the uploaded product's exact identity. Replace the reference earring with the uploaded earring, keeping its exact design, gemstone shape, gemstone color, metal color, finish, texture, craftsmanship, proportions, reflections, brilliance, and every design detail completely unchanged. Never redesign, simplify, or modify the jewelry.
+Recreate the exact composition of the reference: a close-up editorial beauty portrait showing the side of a female model's face with the uploaded earring naturally worn on the ear. Convert the portrait into elegant black-and-white while keeping only the uploaded earring in its original full color (selective color effect). The skin, hair, ear, neck, hand, and background should remain monochrome, while the uploaded jewelry retains its exact original colors, gemstones, metal tones, sparkle, and reflections.
+Add a soft translucent rectangular highlight behind the earring, just like the reference, to emphasize the product without changing its appearance. Place a large luxury serif brand name across the center using the uploaded product's detected brand name. Add an elegant tagline beneath it, premium minimalist typography, a small matching brand logo in the top-right corner (derived from the uploaded branding when available), and a clean brand website at the bottom using the detected brand name. Maintain identical typography hierarchy, spacing, alignment, and editorial layout.
+Use soft diffused studio lighting, luxury jewelry photography, realistic gemstone reflections, premium skin retouching, shallow depth of field, crisp focus on the jewelry, elegant shadows, fine grayscale tones, premium magazine styling, high-end fashion campaign aesthetics, photorealistic rendering, luxury editorial design, HDR lighting, ultra-detailed textures, commercial advertising quality, and 8K resolution.
+The final image should look like it was professionally created by the uploaded jewelry brand itself, preserving the uploaded jewelry exactly while automatically adapting the advertisement to the uploaded brand identity.">Copy Prompt</button>
+                </div>
+            </article>
+\
+    </main>
+
+    <section id="waitlist" class="waitlist-section">
+        <div class="waitlist-card">
+            <h2>Join the Waitlist</h2>
+            <form id="waitlist-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Your email address">
+                </div>
+                <button type="submit" class="btn btn-submit">Join Waitlist</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="toast" class="toast" role="alert" aria-live="assertive">Prompt copied!</div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
+
+

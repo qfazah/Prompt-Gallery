@@ -1,0 +1,521 @@
+/* ==========================================================================
+   1. RESET, LUXURY EDITORIAL TOKENS & CORE ENGINE
+   ========================================================================== */
+:root {
+    /* Pinterest-Inspired Warm & Alabaster Palette */
+    --bg-color: #fcfbfa;                   /* Warm, luxurious editorial off-white */
+    --bg-surface: #ffffff;                 /* Pure crisp white for elevated cards */
+    --accent-color: #111111;               /* Deep charcoal black for heavy contrast elements */
+    --text-primary: #1a1a1a;               /* Soft premium black for readable typography */
+    --text-secondary: #5f6368;             /* Elegant, neutral mid-gray */
+    --text-light: #8c9196;                 /* Subdued utility meta-text */
+    --border-color: rgba(0, 0, 0, 0.05);   /* Microscopic, clean divider lines */
+    --border-hover: rgba(0, 0, 0, 0.15);
+    --card-bg: #ffffff;
+    
+    /* Tactile Multi-Layered Drop Shadows (Pinterest Architecture) */
+    --shadow-premium: 
+        0 2px 4px rgba(0, 0, 0, 0.02),
+        0 12px 32px -4px rgba(0, 0, 0, 0.04); 
+        
+    --shadow-card-hover: 
+        0 24px 48px -6px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(0, 0, 0, 0.01); 
+    
+    /* Smooth Fluid Motion Mechanics */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-elastic: cubic-bezier(0.25, 1, 0.5, 1.15);
+    
+    /* Hardware Accelerated Micro-Interactions */
+    --tx-transform: transform 0.7s var(--ease-out-expo);
+    --tx-color: color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background: radial-gradient(circle at 50% 0%, #ffffff 0%, var(--bg-color) 100%);
+}
+
+/* Premium Minimal Scroll Architecture */
+@media (pointer: fine) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        border: 2px solid var(--bg-color);
+        &:hover {
+            background: rgba(0, 0, 0, 0.18);
+        }
+    }
+}
+
+/* Custom Interactive Focus Rings */
+*:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+/* ==========================================================================
+   1.5 PREMIUM ARCHITECTURAL HEADER (Fixes top emptiness)
+   ========================================================================== */
+.site-header {
+    width: 100%;
+    padding-block: 28px;
+    padding-inline: max(24px, 5vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.header-brand {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.header-nav {
+    display: flex;
+    gap: 32px;
+    
+    a {
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: var(--text-primary);
+        }
+    }
+}
+
+/* ==========================================================================
+   2. HERO SECTION (High-End Studio Font Engine)
+   ========================================================================== */
+.hero {
+    /* Adjusted top padding slightly from 120px/220px to perfectly mesh with the new header */
+    padding-block: clamp(80px, 10vw, 150px) clamp(60px, 8vw, 120px);
+    padding-inline: max(24px, 5vw);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &-container {
+        max-width: 840px;
+        margin-inline: auto;
+    }
+}
+
+.logo {
+    font-size: clamp(3.2rem, 9vw, 6.8rem); 
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 32px;
+    text-wrap: balance;
+    background: linear-gradient(180deg, var(--text-primary) 40%, var(--text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+    margin-bottom: 52px;
+    line-height: 1.65;
+    font-weight: 400;
+    text-wrap: pretty;
+    max-width: 580px;
+    margin-inline: auto;
+}
+
+/* Rounded, Premium Tactile Pill CTA */
+.btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    padding: 20px 48px;
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 100px; 
+    transition: var(--tx-transform), var(--tx-color), box-shadow 0.4s ease;
+    will-change: transform;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+    }
+}
+
+/* ==========================================================================
+   3. CATEGORY FILTERS (Enlarged Luxury Pinterest Pills)
+   ========================================================================== */
+.filters-container {
+    position: sticky;
+    top: -1px; 
+    background-color: rgba(252, 251, 250, 0.85); 
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    z-index: 100;
+    padding-block: 24px; 
+    padding-inline: max(24px, 5vw);
+    border-block: 1px solid var(--border-color);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 14px; 
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.filter {
+    font-family: inherit;
+    font-size: 0.92rem; 
+    font-weight: 600;
+    text-decoration: none; 
+    display: inline-block;
+    padding: 12px 28px; 
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.02); 
+    color: var(--text-secondary);
+    border-radius: 100px; 
+    cursor: pointer;
+    transition: transform 0.4s var(--ease-out-expo), 
+                color 0.3s ease, 
+                background-color 0.3s ease, 
+                box-shadow 0.3s ease;
+    will-change: transform;
+
+    &:hover {
+        color: var(--text-primary);
+        background-color: rgba(0, 0, 0, 0.05); 
+        transform: translateY(-2px) scale(1.03); 
+    }
+
+    &.active {
+        color: #ffffff !important;
+        background-color: var(--accent-color); 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        transform: translateY(0) scale(1); 
+    }
+}
+
+/* ==========================================================================
+   4. INTUITIVE CONTAINER-QUERY GALLERY ENGINE (Pop-Out Scale Card)
+   ========================================================================== */
+.gallery-wrapper {
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-block: clamp(60px, 8vw, 120px);
+    padding-inline: max(24px, 5vw);
+    width: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(290px, 24vw, 400px), 1fr));
+    gap: clamp(32px, 4vw, 52px); 
+    width: 100%;
+}
+
+.card-context {
+    container-type: inline-size;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px; 
+    padding: 16px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-premium);
+    transition: transform 0.6s var(--ease-out-expo), 
+                box-shadow 0.6s var(--ease-out-expo), 
+                border-color 0.4s ease;
+    will-change: transform, box-shadow;
+
+    &:hover {
+        transform: translateY(-8px) scale(1.025); 
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: var(--shadow-card-hover); 
+
+        .card-image-wrapper img {
+            transform: scale(1.05); 
+            filter: brightness(100%);
+        }
+    }
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px; 
+    aspect-ratio: var(--aspect-ratio, 4/5);
+    background-color: #f3f2f0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(96%);
+        transition: transform 1.4s var(--ease-out-expo), filter 0.8s var(--ease-out-expo);
+        will-change: transform, filter;
+    }
+}
+
+@container (min-width: 380px) {
+    .card-title {
+        font-size: 1.4rem;
+    }
+    .badge {
+        font-size: 0.72rem;
+    }
+}
+
+.card-content {
+    padding-block: 20px 8px;
+    padding-inline: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.btn-copy {
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    background-color: #f7f6f4;
+    color: var(--text-primary);
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: auto; 
+    transition: var(--tx-color), var(--tx-transform), background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--accent-color);
+        color: #ffffff;
+        border-color: var(--accent-color);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+/* ==========================================================================
+   5. WAITLIST SECTION (Soft, Sculpted Micro-Card Frame)
+   ========================================================================== */
+.waitlist-section {
+    padding-block: clamp(100px, 10vw, 180px);
+    padding-inline: max(24px, 5vw);
+    border-top: 1px solid var(--border-color);
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, var(--bg-color) 0%, #f4f3f0 100%);
+}
+
+.waitlist-card {
+    background-color: var(--bg-surface);
+    max-width: 640px;
+    width: 100%;
+    padding: clamp(48px, 6vw, 84px) clamp(32px, 5vw, 64px);
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    box-shadow: var(--shadow-premium);
+
+    h2 {
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+        text-align: center;
+        color: var(--text-primary);
+    }
+}
+
+.form-group {
+    margin-bottom: 40px;
+
+    label {
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 12px;
+        color: var(--text-secondary);
+    }
+
+    input {
+        width: 100%;
+        font-family: inherit;
+        font-size: 1.1rem;
+        padding-block: 14px;
+        border: none;
+        border-bottom: 2px solid var(--border-color);
+        background-color: transparent;
+        outline: none;
+        color: var(--text-primary);
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border-bottom-color: var(--accent-color);
+        }
+    }
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: var(--tx-color), transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+}
+
+/* ==========================================================================
+   6. TOAST NOTIFICATION (Minimal Porcelain Float Interface)
+   ========================================================================== */
+.toast {
+    position: fixed;
+    bottom: 40px;
+    right: 40px; 
+    transform: translateY(24px) scale(0.95);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 18px 36px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    transition: transform 0.6s var(--ease-elastic), opacity 0.4s ease;
+    will-change: transform, opacity;
+
+    &.show {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* ==========================================================================
+   7. RUNTIME TRANSITIONS & ACCESSIBILITY 
+   ========================================================================== */
+.card.fade-out {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.4s ease, transform 0.4s var(--ease-out-expo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .card:hover .card-image-wrapper img {
+        transform: none;
+    }
+    .card:hover {
+        transform: none;
+    }
+}
